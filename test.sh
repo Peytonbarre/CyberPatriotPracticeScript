@@ -44,10 +44,13 @@ clamgey(){
 passagegey(){
 
 	sed 's/99999/90/g' /etc/login.defs
-
+	awk '{gsub(/0/,"7",$x);}' /etc/login.defs
+	awk '{gsub(/0/, "14",$x);}' /etc/login.defs
 	
 
 	cont
 }
+
+
 
 startgey
