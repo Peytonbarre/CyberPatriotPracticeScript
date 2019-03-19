@@ -13,7 +13,12 @@ startgey()
 
 	clear
 
-	testgey
+	updategey
+	clamgey
+	passagegey
+	ufwgey
+	sshgey
+	delusegey
 
 	printf "\033[1;31mDone!\033[0m\n"
 }
@@ -122,7 +127,7 @@ sshgey(){
 
 
 
-testgey(){
+delusegey(){
 	
 	array=()
 	while IFS= read -r -p "Next user... (end with an empty line): " line; do
