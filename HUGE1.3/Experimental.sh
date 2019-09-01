@@ -8,18 +8,18 @@ PWDthi=$(pwd)
 a=0
 
 
-startgey()
+startpey()
 {
 
 	clear
 
-	admindelgey
+	admindelpey
 
 	printf "\033[1;31mDone!\033[0m\n"
 }
 
 #Updates Linux using apt-get
-updategey(){
+updatepey(){
 
 	sudo apt-get upgrade
 	sudo apt-get clean
@@ -27,7 +27,7 @@ updategey(){
 }
 
 #Installs and run all of the ClamAv functions
-clamgey(){
+clampey(){
 	
 	printf "Downloading ClamAv..."
 	sudo apt-get install clamav
@@ -35,7 +35,7 @@ clamgey(){
 }
 
 #Changes the password min/max age
-passagegey(){
+passagepey(){
 
 	printf "\033[1;31mChanging password requirements...\033[0m\n"
 	
@@ -85,7 +85,7 @@ passagegey(){
 }
 
 #Installs and enables Ubuntu Firewall;
-ufwgey(){
+ufwpey(){
 	
 	printf "\033[1;31mInstalling Ubuntu Fire Wall\033[0m\n"
 	sudo apt-get install ufw
@@ -96,7 +96,7 @@ ufwgey(){
 }
 
 #Installs and disables SSH login
-sshgey(){
+sshpey(){
 
 	printf "\033[1;31mDownloading SSH...\033[0m\n"
 	sudo apt-get install ssh
@@ -108,7 +108,7 @@ sshgey(){
 
 
 
-geyuserdel(){
+peyuserdel(){
 	
 	array=()
 	while IFS= read -r -p "Next user... (end with an empty line): " line; do
@@ -127,14 +127,14 @@ geyuserdel(){
 	
 }
 
-guestgey(){
+guestpey(){
 
 	echo "removing all guests..."
 	echo "allow-guest=false" >> /etc/lightdm/lightdm.conf.d
 
 }
 
-norootgey(){
+norootpey(){
 
 
 	sed -i '28s/yes/no/g' /etc/ssh/sshd_config
@@ -142,7 +142,7 @@ norootgey(){
 
 }
 
-admindelgey(){
+admindelpey(){
 
 	arrayad=()
 	while IFS= read -r -p "Next user... (end with an empty line): " line; do
@@ -161,4 +161,4 @@ admindelgey(){
 }
 
 
-startgey
+startpey
