@@ -5,22 +5,22 @@ echo "unalias -a" >> ~/.bashrc
 echo "unalias -a" >> /root/.bashrc
 PWDthi=$(pwd)
 
-startgey()
+startpey()
 {
 
 	clear
 
-	updategey
-	clamgey
-	passagegey
-	ufwgey
-	sshgey
+	updatepey
+	clampey
+	passagepey
+	ufwpey
+	sshpey
 
 	printf "\033[1;31mDone!\033[0m\n"
 }
 
 #Updates Linux using apt-get
-updategey(){
+updatepey(){
 
 	sudo apt-get upgrade
 	sudo apt-get clean
@@ -28,7 +28,7 @@ updategey(){
 }
 
 #Installs and run all of the ClamAv functions
-clamgey(){
+clampey(){
 	
 	printf "Downloading ClamAv..."
 	sudo apt-get install clamav
@@ -36,7 +36,7 @@ clamgey(){
 }
 
 #Changes the password min/max age
-passagegey(){
+passagepey(){
 
 	printf "\033[1;31mChanging password requirements...\033[0m\n"
 	
@@ -47,7 +47,7 @@ passagegey(){
 }
 
 #Installs and enables Ubuntu Firewall;
-ufwgey(){
+ufwpey(){
 	
 	printf "\033[1;31mInstalling Ubuntu Fire Wall\033[0m\n"
 	sudo apt-get install ufw
